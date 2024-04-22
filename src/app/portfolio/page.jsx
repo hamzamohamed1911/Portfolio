@@ -10,7 +10,7 @@ import Button from "../_components/Button";
 const Portfolio = () => {
 const ref = useRef();
 
-const scrollToBottom = () => {
+const scrollBottom = () => {
   const scrollDistance = 600;
   window.scrollBy({
     top: scrollDistance,
@@ -31,7 +31,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
       <div className="w-screen h-[calc(100vh-6rem)] font-bold flex items-center justify-center text-5xl sm:text-6xl text-center text-blue-900">
   <div className="flex flex-col items-center justify-center"> 
     <h1 className="pb-32">MY Projects</h1>
-      <motion.button onClick={scrollToBottom}>
+      <motion.button onClick={scrollBottom}>
       <Image className="h-28 w-28  animate-bounce" alt="arrowDown" src={arrowDown} />
       </motion.button>
   </div>
