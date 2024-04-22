@@ -1,14 +1,23 @@
 "use client"
 import { motion ,useScroll ,useTransform} from "framer-motion";
-import { useRef } from "react";
+import {  useRef } from "react";
 import Image from 'next/image';
-import { cloud, moon } from "../../../public";
+import { arrowDown, cloud, moon } from "../../../public";
 import { PROJECTS } from "../_constants";
 import Link from 'next/link'
 import Button from "../_components/Button";
 
 const Portfolio = () => {
 const ref = useRef();
+
+const scrollToBottom = () => {
+  const scrollDistance = 540;
+  window.scrollBy({
+    top: scrollDistance,
+    behavior: "smooth"
+  });
+};
+
 const { scrollYProgress}= useScroll({target:ref})
 const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
 
@@ -19,9 +28,16 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
      animate={{y:"0%"}} 
      transition={{duration:1}}>
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen  h-[calc(100vh-6rem)]  font-bold flex items-center justify-center text-5xl sm:text-6xl text-center text-blue-900 ">
-        MY Projects
-        </div>
+      <div className="w-screen h-[calc(100vh-6rem)] font-bold flex items-center justify-center text-5xl sm:text-6xl text-center text-blue-900">
+  <div className="flex flex-col items-center justify-center"> 
+    <h1 className="pb-32">MY Projects</h1>
+      <motion.button onClick={scrollToBottom}>
+      <Image className="h-28 w-28  animate-bounce" alt="arrowDown" src={arrowDown} />
+      </motion.button>
+  </div>
+</div>
+
+        
 
         <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
           <motion.div style={{x}} className="flex">
@@ -41,7 +57,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
             className="animate-pulse lg:self-center lg:mr-4 sm:h-300 sm:w-300 filter brightness-75"
         />
         <h1 className="text-5xl sm:text-6xl pt-6 font-bold animate-bounce text-slate-100">
-            Let is start
+            Let&apos;s start
         </h1>
     </div>
 </div>
