@@ -39,7 +39,7 @@ const TypingText = ({ texts }) => {
 
   return (
     <motion.h1 
-    className='text-4xl text-blue-900 font-sans font-bold sm:text-6xl'
+    className='text-3xl text-blue-900 font-sans font-bold sm:text-6xl'
      animate={controls} 
      initial={{ opacity: 0 }}>
       I am a  {displayText}
