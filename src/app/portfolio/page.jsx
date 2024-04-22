@@ -11,7 +11,7 @@ const Portfolio = () => {
 const ref = useRef();
 
 const scrollToBottom = () => {
-  const scrollDistance = 540;
+  const scrollDistance = 600;
   window.scrollBy({
     top: scrollDistance,
     behavior: "smooth"
