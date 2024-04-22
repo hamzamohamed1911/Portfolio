@@ -41,7 +41,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
             className="animate-pulse lg:self-center lg:mr-4 sm:h-300 sm:w-300 filter brightness-75"
         />
         <h1 className="text-5xl sm:text-6xl pt-6 font-bold animate-bounce text-slate-100">
-            Let's start
+            Let is start
         </h1>
     </div>
 </div>

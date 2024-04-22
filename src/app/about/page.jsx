@@ -42,7 +42,7 @@ const About = () => {
       </h1>
 
       <p className="text-blue-900  font-roboto  text-lg ">
-      Hamza muhamed is a passionate and experienced web developer specializing in front-end development using React.js and Next.js. With a Bachelor's degree in Computer Science from Al shorouk academy ,
+      Hamza muhamed is a passionate and experienced web developer specializing in front-end development using React.js and Next.js. With a Bachelor&apos;s degree in Computer Science from Al shorouk academy 
       <span>  Hamza embarked on his journey into the world of web development.   </span>
 
       </p>
