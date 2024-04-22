@@ -11,11 +11,9 @@ const TypingText = ({ texts }) => {
   useEffect(() => {
     if (controls) { 
       const animateText = async () => {
-        await controls.start({ opacity: 0 });
         setDisplayText('');
-      
+        await controls.start({ opacity: 0 });
         await controls.start({ opacity: 1 });
-
         const text = texts[index];
 
         for (let i = 0; i <= text.length; i++) {
@@ -41,7 +39,7 @@ const TypingText = ({ texts }) => {
 
   return (
     <motion.h1 
-    className='text-4xl text-blue-900 font-sans font-bold md:text-6xl'
+    className='text-4xl text-blue-900 font-sans font-bold sm:text-6xl'
      animate={controls} 
      initial={{ opacity: 0 }}>
       I am a  {displayText}
