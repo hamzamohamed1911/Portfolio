@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { Links, icons } from "../_constants";
 import { useState } from "react";
-import NavLink from "./navLink";
 import { motion } from "framer-motion"
+import NavLink from "./NavLink.jsx";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
