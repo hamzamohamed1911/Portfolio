@@ -29,15 +29,15 @@ const Homepage = () => {
       </div> 
        {/*Text container*/}
   
-       <div className=" flex flex-col lg:h-full lg:w-1/2   gap-8 items-center justify-center ">
+       <div className=" flex flex-col lg:h-full lg:w-1/2 gap-6 items-center justify-center ">
       
         
-      <div className='pt-4'>
+      <div className=' sm:pt-2'>
       <TypingText   texts={texts} /> 
 
       </div>
         
-        <p className='text-blue-900  font-roboto font-light text-lg sm:text-2xl px-4'>
+        <p className='text-blue-900  font-roboto font-light text-md sm:text-2xl px-4'>
         Hello! My Name Is Hamza muhammed , a dedicated React.js and Next.js developer with a strong foundation in computer science. Graduating from the Faculty of Computer Science has equipped me with a solid understanding of fundamental programming concepts, which I apply in my work to create innovative web applications. 
         </p>
         <div className='flex gap-4 lg:w-full'>
