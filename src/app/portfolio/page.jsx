@@ -72,7 +72,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
                   <Link href={project.DomainLink} className="relative">
                     <Image alt="project" className="object-contain hover:brightness-90" src={project.src} height={500} width={500}/>
                   </Link>
-                  <p className="py-6 text-xl sm:text-2xl">{project.description}</p>
+                  <p className="py-6 text-xl w-96 h-56 sm:text-2xl">{project.description}</p>
                 <div className="flex gap-4 lg:w-full">
                 <Link href={project.DomainLink}>
                     <Button label="see Demo" backgroundColor/>
