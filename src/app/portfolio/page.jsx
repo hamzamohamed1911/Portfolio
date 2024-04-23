@@ -87,7 +87,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
               </div>
           </div>
 
-          <div   className="bg-cover  bg-center flex items-center justify-center w-screen h-screen bg-gradient-to-r from-blue-950 to-slate-950 ">
+          <div   className="bg-cover  bg-center flex items-center justify-center -mx-1 w-screen h-screen bg-gradient-to-r from-blue-950 to-slate-950 ">
 
 <div className="text-center">
     <Image

@@ -48,9 +48,9 @@ const About = () => {
       <span className="text-blue-900 font-bold italic text-lg ">
       Motivated by the belief that every line of code has the potential to change the world
       </span>
-     
+      <ResumeDownloadButton/>
         </div>  
-        <ResumeDownloadButton/>
+        
     {/* skills Container*/}
     <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
 
