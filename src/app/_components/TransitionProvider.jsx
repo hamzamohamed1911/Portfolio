@@ -10,7 +10,7 @@ const pathName = usePathname();
   return (
     <AnimatePresence mode="wait">
      <div key={pathName}
-      className="relative w-screen h-screen bg-gradient-to-b from-blue-200 to-blue-400"
+      className=" w-screen h-screen bg-gradient-to-b from-blue-200 to-blue-400"
        >
         <motion.div 
         className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"

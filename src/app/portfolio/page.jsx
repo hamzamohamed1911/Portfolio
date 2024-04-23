@@ -63,7 +63,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
 </div>
 
 
-          <div className="sticky top-0 flex h-screen gap-10 items-center">
+          <div className="sticky top-10 flex h-screen gap-20 items-center">
             <div className="flex">
              {PROJECTS.map((project)=>(
               <div className={`-mx-1  h-screen w-screen flex items-center justify-center bg-gradient-to-r ${project.color} `} key={project.id}>
