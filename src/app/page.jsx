@@ -17,19 +17,18 @@ const Homepage = () => {
   return(
     <motion.div 
     key="Home"
-    className='h-full'
+    className='h-full '
      initial={{y:"-200vh"}}
      animate={{y:"0%"}} 
      transition={{duration:1}}>
     
-    <div className=" h-full flex flex-col px-4  lg:flex-row sm:px-8 md:px-12 lg:px-20 xl-px-48 ">
-      {/*Image container*/}
+    <div className=" h-full flex flex-col px-4 lg:flex-row sm:px-8 md:px-12 lg:px-20 xl-px-48 ">
+
       <div className="h-1/2 lg:h-full lg:w-1/2 relative ">
-        <Image alt="hero"  src={hero} fill className='object-contain'/>
+        <Image alt="hero"  src={hero} fill className='object-contain '/>
       </div> 
-       {/*Text container*/}
-  
-       <div className=" flex flex-col lg:h-full lg:w-1/2 gap-6 items-center justify-center ">
+ 
+       <div className=" flex flex-col lg:h-full lg:w-1/2 gap-6 items-center justify-center">
       
         
       <div className=' sm:pt-2'>
