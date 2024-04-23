@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <motion.div 
-    className='h-full  lg:py-32'
+    className='h-full overflow-scroll  lg:py-32'
      initial={{y:"-200vh"}}
      animate={{y:"0%"}} 
      transition={{duration:1}}>
