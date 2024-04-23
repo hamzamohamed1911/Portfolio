@@ -63,7 +63,8 @@ const NavBar = () => {
         </div>
 
         { /* menu button */}
-        <div className="md:hidden z-50">
+        <div className="md:hidden z-30">
+          
      
          <button className="w-10 h-8 flex flex-col justify-between z-20 relative" onClick={(()=>setOpen((prev)=>!prev))}>
           <motion.div  variants={topVariants} animate={open ? "opened" :"closed" } className="w-10 h-1 bg-blue-500 rounded origin-left">
@@ -78,8 +79,17 @@ const NavBar = () => {
           </motion.div>
         {/*menu list*/}
          </button>
+         
       {open && (
       <motion.div variants={listVariants} initial="closed" animate="opened" className="absolute top-0 left-0 w-screen h-screen bg-white text-blue-500 flex flex-col items-center justify-center gap-8 text-4xl ">
+
+           <div className=" flex gap-5 ">
+             {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
+
+              <span className='ransition-all hover:-translate-y-1 hover:scale-110 duration-300  hover:fill-blue-800 fill-blue-500 ' > {icon.ico}</span>
+             </Link>))}
+           </div>
+
             {Links.map(link=>(
               <motion.div variants={listItemVariants} key={link.title}>
                 <Link  href={link.url}>
