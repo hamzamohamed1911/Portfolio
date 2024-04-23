@@ -55,9 +55,11 @@ const Contact = () => {
           </div>
 
           <button  type="submit" value="Send" className=" block py-3 px-5 text-md font-medium text-center text-white rounded-lg bg-blue-500 hover:bg-blue-600  focus:ring-4 focus:outline-none focus:ring-primary-300 ">Send message</button>
+          <div className="py-1">
           {success&&<span className=" text-green-600 font-semibold">Your message has been sent successfuly ! </span>}
           {error&&<span className="text-red-600 font-semibold">smothing went Wrong !</span>}
 
+          </div>
       </form>
   </div>
 
