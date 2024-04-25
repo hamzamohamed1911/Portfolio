@@ -9,11 +9,11 @@ const ResumeDownloadButton = () => {
 
 
     const downloadResume = () => {
-        const resumeUrl = '/HamzaMohamedSaberCV.docx'; 
+        const resumeUrl = '/hamzamuhammedCv.pdf'; 
         console.log(resumeUrl)
         const downloadLink = document.createElement('a');
         downloadLink.href = resumeUrl;
-        downloadLink.download = 'HamzaMohamedSaberCV.docx'; 
+        downloadLink.download = 'hamzamuhammedCv.pdf'; 
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);

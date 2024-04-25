@@ -70,7 +70,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
                 <div className="p-20 flex flex-col  text-white">
                   <h1 className="text-4xl pb-6 font-semibold">{project.title} </h1>
                   <Link href={project.DomainLink} className="relative">
-                    <Image alt="project" className="object-contain rounded-sm hover:brightness-90" src={project.src} height={500} width={500}/>
+                    <Image alt="project" className="object-contain rounded-md hover:brightness-90" src={project.src} height={500} width={500}/>
                   </Link>
                   <p className="py-6 text-xl w-96 h-56 sm:text-2xl">{project.description}</p>
                 <div className="flex gap-4 lg:w-full">
