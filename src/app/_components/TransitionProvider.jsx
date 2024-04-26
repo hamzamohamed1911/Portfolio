@@ -14,7 +14,7 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className={`w-screen h-screen ${dark ? ' bg-gradient-to-b from-blue-600 bg-blue-900 text-white' : 'bg-gradient-to-b from-blue-200 to-blue-400'}`} // Adjust background color based on dark mode
+        className={`w-screen h-screen ${dark ? ' bg-gradient-to-b from-blue-800 bg-blue-900 ' : 'bg-gradient-to-b from-blue-200 to-blue-400'}`} // Adjust background color based on dark mode
       >
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"

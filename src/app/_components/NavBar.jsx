@@ -60,7 +60,7 @@ const NavBar = () => {
         <div className="hidden md:flex gap-5 ">
              {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
 
-              <span className= {`transition-all hover:-translate-y-1 hover:scale-110 duration-300 ${dark ? "hover:fill-blue-400 fill-blue-200" : "hover:fill-blue-800 fill-blue-500"} `}> {icon.ico}</span>
+              <span className= {`${dark ? "hover:fill-blue-400 fill-blue-200" : "fill-blue-500 hover:fill-blue-700"} `}> {icon.ico}</span>
              </Link>))}
         </div>
 
@@ -88,7 +88,7 @@ const NavBar = () => {
            <div className=" flex gap-5 ">
              {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
 
-              <span className='ransition-all hover:-translate-y-1 hover:scale-110 duration-300  hover:fill-blue-800 fill-blue-500 ' > {icon.ico}</span>
+              <span  > {icon.ico}</span>
              </Link>))}
            </div>
 

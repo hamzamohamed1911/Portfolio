@@ -13,7 +13,7 @@ export const Links = [
   ];
   import { FaLinkedin ,FaInstagram ,FaGithub ,FaFacebook} from "react-icons/fa";
 
-const classes = "h-10 w-10 fill-blue-500 hover:fill-blue-700 ransition-all hover:-translate-y-1 hover:scale-110 duration-300"
+const classes = "h-10 w-10 transition-all hover:-translate-y-1 hover:scale-110 duration-300 fill-blue-500 hover:fill-blue-700"
 export const icons = [
     {
         url:"https://github.com/hamzamohamed1911",
