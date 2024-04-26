@@ -4,7 +4,9 @@ import { SKILLS } from "../_constants"
 import Brain from "../_components/Brain"
 import { useRef } from "react";
 import ResumeDownloadButton from "../_components/ResumeDownloadButton";
+import { useDark } from "../_store/ThemeProvider";
 const About = () => {
+   const {dark } =useDark()
    
   const containerRef = useRef();
 
@@ -36,16 +38,16 @@ const About = () => {
  
       
         <div className="flex flex-col gap-12 justify-center " >
-      <h1 className="text-2xl text-blue-900 font-sans font-bold ">
+      <h1 className={`text-2xl font-sans font-bold ${dark ? "text-white" :"text-blue-900"}`}>
       BIOGRAPHY
       </h1>
 
-      <p className="text-blue-900  font-roboto  text-lg ">
+      <p className={`text-lg font-sans font-light font-roboto ${dark ? "text-white" :"text-blue-900"}`}>
       Hamza muhamed is a passionate and experienced web developer specializing in front-end development using React.js and Next.js. With a Bachelor&apos;s degree in Computer Science from Al shorouk academy 
       <span>  Hamza embarked on his journey into the world of web development.   </span>
 
       </p>
-      <span className="text-blue-900 font-bold italic text-lg ">
+      <span className={`font-bold italic text-lg ${dark ? "text-white" :"text-blue-900"}`}>
       Motivated by the belief that every line of code has the potential to change the world
       </span>
       <ResumeDownloadButton/>
@@ -59,7 +61,7 @@ const About = () => {
        initial={{x:'-300px'}} 
        animate={isSkillRefInView ?{x:0} :{}} 
        transition={ {delay:0.3}}
-       className="text-2xl text-blue-900 font-sans font-bold ">
+       className={`text-2xl font-sans font-bold ${dark ? "text-white" :"text-blue-900"}`}>
          SKILLS
       </motion.h1>
       {/* skills list*/}
@@ -98,7 +100,7 @@ const About = () => {
      initial={{x:'-400px'}}
      animate={isExperienceRefInView ?{x:"0"}:{} }
      transition={{delay:0.2}}
-     className="text-2xl text-blue-900 font-sans font-bold ">
+     className={`text-2xl font-sans font-bold ${dark ? "text-white" :"text-blue-900"}`}>
       EXPERIENCE
     </motion.h1>
 
@@ -117,8 +119,8 @@ const About = () => {
            <div className=" w-1/3">
                  <div>
                   <h6 className="bg-blue-100 text-blue-900 p-3 font-semibold rounded-b-lg rounded-s-lg">junior JavaScript developer  </h6>
-                  <p className="p-3 text-sm italic text-blue-900">my current employment . may better that the postion before !</p>
-                  <p className="p-3 text-blue-400 text-sm  font-semibold">2024 - present</p> 
+                  <p className={`p-3 text-sm italic ${dark ? "text-white" :"text-blue-900"}`}>my current employment . may better that the postion before !</p>
+                  <p className="p-3 text-blue-500 text-sm  font-semibold">2024 - present</p> 
                   <h6 className="p-1 rounded text-blue-900 bg-blue-100 text-sm font-semibold w-fit"> Apple</h6>
                   </div>
             </div>
@@ -128,8 +130,8 @@ const About = () => {
                 {/* line*/}
                  <div className="w-1 h-full bg-gray-500 rounded relative "> 
                   {/* circle*/}
-                  <div className="text-center font-bold  absolute w-6 h-6 rounded-full ring-4 ring-blue-400 bg-white -left-2">
-                     1
+                  <div className="text-center font-bold  absolute w-5 h-5 rounded-full ring-4 ring-blue-400 bg-white -left-2">
+                    
                   </div> 
 
                  </div> 
@@ -156,8 +158,8 @@ const About = () => {
    {/* line*/}
       <div className="w-1 h-full bg-gray-500 rounded relative "> 
       {/* circle*/}
-      <div className="text-center font-bold  absolute w-6 h-6 rounded-full ring-4 ring-blue-400 bg-white -left-2">
-            2
+      <div className="text-center font-bold  absolute w-5 h-5 rounded-full ring-4 ring-blue-400 bg-white -left-2">
+            
       </div> 
 
       </div> 
@@ -166,8 +168,8 @@ const About = () => {
       {/* right*/}
       <div className=" w-1/3" >  <div>
          <h6 className="bg-blue-100 text-blue-900 p-3 font-semibold rounded-b-lg rounded-s-lg">junior JavaScript developer  </h6>
-         <p className="p-3 text-sm italic text-blue-900">my current employment . may better that the postion before !</p>
-         <p className="p-3 text-blue-400 text-sm  font-semibold">2024 - present</p> 
+         <p className={`p-3 text-sm italic ${dark ? "text-white" :"text-blue-900"}`}>my current employment . may better that the postion before !</p>
+         <p className="p-3 text-blue-500 text-sm  font-semibold">2024 - present</p> 
          <h6 className="p-1 rounded text-blue-900 bg-blue-100 text-sm font-semibold w-fit"> Apple</h6>
          </div>
       </div>
@@ -184,8 +186,8 @@ const About = () => {
             <div className=" w-1/3">
                <div>
                <h6 className="bg-blue-100 text-blue-900 p-3 font-semibold rounded-b-lg rounded-s-lg">junior JavaScript developer  </h6>
-               <p className="p-3 text-sm italic text-blue-900">my current employment . may better that the postion before !</p>
-               <p className="p-3 text-blue-400 text-sm  font-semibold">2024 - present</p> 
+               <p className={`p-3 text-sm italic ${dark ? "text-white" :"text-blue-900"}`}>my current employment . may better that the postion before !</p>
+               <p className="p-3 text-blue-500 text-sm  font-semibold">2024 - present</p> 
                <h6 className="p-1 rounded text-blue-900 bg-blue-100 text-sm font-semibold w-fit"> Apple</h6>
                </div>
             </div>
@@ -194,8 +196,8 @@ const About = () => {
             {/* line*/}
                <div className="w-1 h-full bg-gray-500 rounded relative "> 
                {/* circle*/}
-               <div className="text-center font-bold absolute w-6 h-6 rounded-full ring-4 ring-blue-400 bg-white -left-2">
-                  3
+               <div className="text-center font-bold absolute w-5 h-5 rounded-full ring-4 ring-blue-400 bg-white -left-2">
+              
                </div> 
 
                </div> 

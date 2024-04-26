@@ -4,9 +4,11 @@ import { Links, icons } from "../_constants";
 import { useState } from "react";
 import { motion } from "framer-motion"
 import NavLink from "./NavLink.jsx";
+import { useDark } from "../_store/ThemeProvider";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const { dark } = useDark(); 
   const topVariants={
     closed:{rotate:0},
     opened:{rotate:45}
@@ -58,7 +60,7 @@ const NavBar = () => {
         <div className="hidden md:flex gap-5 ">
              {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
 
-              <span className='ransition-all hover:-translate-y-1 hover:scale-110 duration-300  hover:fill-blue-800 fill-blue-500 ' > {icon.ico}</span>
+              <span className= {`transition-all hover:-translate-y-1 hover:scale-110 duration-300 ${dark ? "hover:fill-blue-400 fill-blue-200" : "hover:fill-blue-800 fill-blue-500"} `}> {icon.ico}</span>
              </Link>))}
         </div>
 

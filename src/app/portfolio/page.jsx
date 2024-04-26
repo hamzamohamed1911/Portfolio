@@ -6,9 +6,11 @@ import { arrowDown, cloud, moon } from "../../../public";
 import { PROJECTS } from "../_constants";
 import Link from 'next/link'
 import Button from "../_components/Button";
+import { useDark } from "../_store/ThemeProvider";
 
 const Portfolio = () => {
 const ref = useRef();
+const {dark} =useDark()
 
 const scrollBottom = () => {
   const scrollDistance = 600;
@@ -28,8 +30,8 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
      animate={{y:"0%"}} 
      transition={{duration:1}}>
       <div className="h-[600vh] relative" ref={ref}>
-      <div className="w-screen h-[calc(100vh-6rem)] font-bold flex items-center justify-center text-5xl sm:text-6xl text-center text-blue-900">
-  <div className="flex flex-col items-center justify-center"> 
+      <div className={`w-screen h-[calc(100vh-6rem)] font-bold flex items-center justify-center text-5xl sm:text-6xl text-center ${dark ? "text-white" :"text-blue-900"}`}>
+     <div className="flex flex-col items-center justify-center"> 
     <h1 className="pb-32">MY Projects</h1>
       <motion.button onClick={scrollBottom}>
       <Image className="h-28 w-28  animate-bounce" alt="arrowDown" src={arrowDown} />

@@ -1,10 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCog, FaMoon } from 'react-icons/fa';
+import {  FaMoon ,FaSun} from 'react-icons/fa';
 import { IoIosArrowBack ,IoIosArrowForward  } from "react-icons/io";
+import { useDark } from '../_store/ThemeProvider';
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
+   const {dark ,toggleNightMode} =useDark()
   
     const toggleSidebar = () => {
       setIsOpen(!isOpen);
@@ -30,9 +32,10 @@ const Sidebar = () => {
              <IoIosArrowForward size={24} />
            </button>
 
-           <div className="flex flex-col gap-4 items-center">
-             <FaMoon className="text-gray-600 cursor-pointer" size={24} />
-             <FaCog className="text-gray-600 cursor-pointer" size={24} />
+           <div onClick={toggleNightMode} className="flex flex-col gap-4 items-center">
+            {dark ? (<FaMoon className="text-blue-600 cursor-pointer" size={24} />) :    <FaSun className="text-blue-600 cursor-pointer" size={24} />}
+             
+          
            </div>
          </motion.div>
           )}
