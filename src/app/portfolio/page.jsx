@@ -49,7 +49,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
            </div>
 
 
-           <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-blue-400 to-blue-500">
+           <div className="flex items-center pr-10  justify-center w-screen h-screen bg-gradient-to-r from-blue-400 to-blue-500">
     <div className="text-center">
         <Image
             alt="moon"

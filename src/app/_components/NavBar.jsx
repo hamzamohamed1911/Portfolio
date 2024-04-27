@@ -83,7 +83,7 @@ const NavBar = () => {
          </button>
          
       {open && (
-      <motion.div variants={listVariants} initial="closed" animate="opened" className="absolute top-0 left-0 w-screen h-screen bg-white text-blue-500 flex flex-col items-center justify-center gap-8 text-4xl ">
+      <motion.div variants={listVariants} initial="closed" animate="opened" className= {`absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center gap-8 text-4xl ${dark ? "bg-slate-300 text-blue-500" : " bg-white text-blue-500"} `}>
 
            <div className=" flex gap-5 ">
              {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
