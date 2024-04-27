@@ -68,7 +68,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
           <div className="sticky top-10 flex h-screen gap-20 items-center">
             <div className="flex">
              {PROJECTS.map((project)=>(
-              <div className={`-mx-1  h-screen w-screen flex items-center justify-center bg-gradient-to-r ${project.color} `} key={project.id}>
+              <div className={`-mx-1  px-10 h-screen w-screen flex items-center justify-center bg-gradient-to-r ${project.color} `} key={project.id}>
                 <div className="p-20 flex flex-col  text-white">
                   <h1 className="text-4xl pb-6 font-semibold">{project.title} </h1>
                   <Link href={project.DomainLink} className="relative">
@@ -76,7 +76,7 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
                   </Link>
                   <p className="py-6 text-xl w-96 h-56 sm:text-2xl">{project.description}</p>
                 <div className="flex gap-4 lg:w-full">
-                <Link href={project.DomainLink}>
+                  <Link href={project.DomainLink}>
                     <Button label="see Demo" backgroundColor/>
                   </Link>
                   <Link href={project.GithubLink}>

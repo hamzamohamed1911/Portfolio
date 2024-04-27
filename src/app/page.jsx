@@ -6,8 +6,6 @@ import{ motion } from "framer-motion"
 import TypingText from './_components/TypingText';
 import { useRouter } from 'next/navigation'
 import { useDark } from './_store/ThemeProvider';
-
-
 const Homepage = () => { 
   const router = useRouter()
   const { dark } = useDark(); 
@@ -29,7 +27,6 @@ const Homepage = () => {
       </div> 
  
        <div className=" flex flex-col lg:h-full lg:w-1/2 gap-6 items-center justify-center">
-      
         
       <div className=' sm:pt-2'>
       <TypingText   texts={texts} /> 
