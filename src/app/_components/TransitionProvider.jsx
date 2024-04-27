@@ -21,9 +21,10 @@ const TransitionProvider = ({ children }) => {
   
     <AnimatePresence mode="wait">
       <div
-        key={pathName}
-        className={`w-screen h-screen ${dark ? ' bg-gradient-to-b from-blue-700 to-slate-800' : 'bg-gradient-to-b from-blue-200 to-blue-400'}`} 
-      >
+  key={pathName}
+  style={dark ? {backgroundImage: `url('./night.jpg')`} : null}
+  className={`w-screen h-screen bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
+>
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
           animate={{ height: "0vh" }}

@@ -6,14 +6,14 @@ import { IoIosArrowBack ,IoIosArrowForward  } from "react-icons/io";
 import { useDark } from '../_store/ThemeProvider';
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
-   const {dark ,toggleNightMode} =useDark()
+   const {dark ,toggleNightMode} =useDark(false)
   
     const toggleSidebar = () => {
       setIsOpen(!isOpen);
     };
     return (
       <div className="fixed top-1/4 right-0 z-20">
-        <div className="mr-4 transition hover:-translate-x-3  duration-200 ">
+        <div className="mr-2 transition hover:-translate-x-3  duration-200 ">
           {!isOpen && (
             <button onClick={toggleSidebar}><IoIosArrowBack className= "transform bg-blue-600 text-white rounded-md " size={24} /></button>
           )}
@@ -33,7 +33,7 @@ const Sidebar = () => {
            </button>
 
            <div onClick={toggleNightMode} className="flex flex-col gap-4 items-center">
-            {dark ? (<FaMoon className="text-blue-600 cursor-pointer" size={24} />) :    <FaSun className="text-blue-600 cursor-pointer" size={24} />}
+            {dark ? (<FaMoon className="text-blue-600 cursor-pointer" size={24} />) :  <FaSun className="text-blue-600 cursor-pointer" size={24} />}
              
           
            </div>
