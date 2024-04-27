@@ -11,10 +11,18 @@ const TransitionProvider = ({ children }) => {
   const { dark } = useDark(); 
 
   return (
+    // style={{
+    //   backgroundImage: `url(${dark ? './night.jpg' : ''})`,
+    //   backgroundSize: 'cover',
+    //   backgroundPosition: 'center',
+     
+     
+    // }}
+  
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className={`w-screen h-screen ${dark ? ' bg-gradient-to-b from-blue-800 to-slate-800' : 'bg-gradient-to-b from-blue-200 to-blue-400'}`} // Adjust background color based on dark mode
+        className={`w-screen h-screen ${dark ? ' bg-gradient-to-b from-blue-700 to-slate-800' : 'bg-gradient-to-b from-blue-200 to-blue-400'}`} 
       >
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
