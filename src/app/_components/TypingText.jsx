@@ -19,7 +19,7 @@ const TypingText = ({ texts }) => {
           setDisplayText(text.slice(0, i));
           await new Promise(resolve => setTimeout(resolve, 100)); 
         }
-        await new Promise(resolve => requestAnimationFrame(resolve, 2000)); 
+        await new Promise(resolve => requestAnimationFrame(resolve)); 
         for (let i = text.length; i >= 0; i--) {
           setDisplayText(text.slice(0, i));
           await new Promise(resolve => setTimeout(resolve,100)); 
