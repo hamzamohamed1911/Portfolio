@@ -8,23 +8,17 @@ import { useDark } from "../_store/ThemeProvider"
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
-  const { dark } = useDark(); 
+  const { dark } = useDark();
+
+  const backgroundImageStyle = dark ? { backgroundImage: `url('./night.jpg')` } : {};
 
   return (
-    // style={{
-    //   backgroundImage: `url(${dark ? './night.jpg' : ''})`,
-    //   backgroundSize: 'cover',
-    //   backgroundPosition: 'center',
-     
-     
-    // }}
-  
     <AnimatePresence mode="wait">
       <div
-  key={pathName}
-  style={dark ? {backgroundImage: `url('./night.jpg')`} : null}
-  className={`w-screen h-screen bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
->
+        key={pathName}
+        style={{ ...backgroundImageStyle }}
+        className={`w-screen h-screen bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
+      >
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
           animate={{ height: "0vh" }}
@@ -58,7 +52,7 @@ const TransitionProvider = ({ children }) => {
         </div>
       </div>
     </AnimatePresence>
-  )
+  );
 }
 
-export default TransitionProvider
+export default TransitionProvider;

@@ -13,18 +13,18 @@ const TypingText = ({ texts }) => {
     if (controls) { 
       const animateText = async () => {
         setDisplayText('');
-        await controls.start({ opacity: 0 });
-        await controls.start({ opacity: 1 });
+      
+   
         const text = texts[index];
 
         for (let i = 0; i <= text.length; i++) {
           setDisplayText(text.slice(0, i));
-          await new Promise(resolve => setTimeout(resolve, 120)); 
+          await new Promise(resolve => setTimeout(resolve, 100)); 
         }
-
+        await new Promise(resolve => requestAnimationFrame(resolve, 2000)); 
         for (let i = text.length; i >= 0; i--) {
           setDisplayText(text.slice(0, i));
-          await new Promise(resolve => setTimeout(resolve,120)); 
+          await new Promise(resolve => setTimeout(resolve,100)); 
         }
 
         setIndex(index === texts.length - 1 ? 0 : index + 1);
@@ -34,15 +34,15 @@ const TypingText = ({ texts }) => {
       
     }
     return () => {
-      controls.stop(); // Stop ongoing animations
+      controls.stop(); 
     }
-  }, [texts, index, controls]);
+  }, [index]);
 
   return (
     <motion.h1 
     className= {` font-sans font-bold text-3xl sm:text-5xl ${dark ? " text-white" : "text-blue-900"} `}
      animate={controls} 
-     initial={{ opacity: 0 }}>
+    >
       I am a  {displayText}
     </motion.h1>
   );
