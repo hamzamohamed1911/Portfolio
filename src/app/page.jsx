@@ -10,7 +10,7 @@ const Homepage = () => {
   const router = useRouter()
   const { dark } = useDark(); 
 
-  const texts = ["Software Engineer", "React.js Developer"];
+  const texts = ["Software Engineer", "React.js Developer","Next.js Developer"];
 
   return(
     <motion.div 

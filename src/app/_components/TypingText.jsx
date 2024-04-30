@@ -1,20 +1,18 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import { useDark } from '../_store/ThemeProvider';
 
 const TypingText = ({ texts }) => {
   const [index, setIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const controls = useAnimation();
+
   const { dark } = useDark(); 
 
   useEffect(() => {
-    if (controls) { 
+    
       const animateText = async () => {
         setDisplayText('');
       
-   
         const text = texts[index];
 
         for (let i = 0; i <= text.length; i++) {
@@ -32,19 +30,13 @@ const TypingText = ({ texts }) => {
 
       animateText();
       
-    }
-    return () => {
-      controls.stop(); 
-    }
   }, [index]);
 
   return (
-    <motion.h1 
-    className= {` font-sans font-bold text-3xl sm:text-5xl ${dark ? " text-white" : "text-blue-900"} `}
-     animate={controls} 
-    >
+    <h1 
+     className= {` font-sans font-bold text-3xl sm:text-5xl ${dark ? " text-white" : "text-blue-900"} `} >
       I am a  {displayText}
-    </motion.h1>
+    </h1>
   );
 };
 
