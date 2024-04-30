@@ -5,7 +5,7 @@ import {  FaMoon ,FaSun} from 'react-icons/fa';
 import { IoIosArrowBack ,IoIosArrowForward ,IoMdSettings  } from "react-icons/io";
 import { useDark } from '../_store/ThemeProvider';
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
    const {dark ,toggleNightMode ,setDark} =useDark()
   
     const toggleSidebar = () => {
