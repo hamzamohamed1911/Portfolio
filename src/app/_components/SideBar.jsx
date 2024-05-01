@@ -12,12 +12,11 @@ const Sidebar = () => {
       setIsOpen(!isOpen);
     };
     return (
-      <div className=" fixed top-1/4 right-0 z-20">
+      <div className="fixed top-1/4 right-0 z-20">
 
-
-        <div className=" mr-2  transition hover:-translate-x-3  duration-200 ">
+        <div className=" mr-1 transition hover:-translate-x-3  duration-200 ">
           {!isOpen && (
-            <button onClick={toggleSidebar}><IoIosArrowBack className= "transform bg-blue-600 text-white rounded-md " size={24} /></button>
+            <button onClick={toggleSidebar}><IoIosArrowBack className= " bg-blue-600 text-white rounded-md " size={24} /></button>
           )}
         </div>
     
@@ -28,19 +27,19 @@ const Sidebar = () => {
            animate={{ x: 0 }}
            exit={{  x: '100%' }}
            transition={{ duration: 0.5, type: 'spring', stiffness: 200, damping: 25 }}
-           className= " bg-gray-200 shadow-md p-6 rounded-lg"
+           className= " relative bg-gray-200 shadow-md p-6 rounded-lg"
            whileHover={{ translateX: 12 }} 
          >
           
 
-           <div   className="relative flex flex-col gap-4 items-center">
+           <div   className=" flex flex-col gap-4 items-center">
 
             <button onClick={toggleNightMode}> 
             {dark ? (<FaSun className="text-blue-600 cursor-pointer" size={24} />) :  <FaMoon className="text-blue-600 cursor-pointer" size={24} />}
             </button>
              <IoMdSettings onClick={()=>(setDark(false))}  className="text-gray-600 cursor-pointer" size={24}/> 
 
-             <button onClick={toggleSidebar} className="absolute bg-blue-600 text-white rounded-md left-0  top-1/4 transform -translate-x-14">
+             <button onClick={toggleSidebar} className="absolute bg-blue-600 text-white rounded-md -left-8 top-1/4">
              <IoIosArrowForward size={24} />
            </button>
 
