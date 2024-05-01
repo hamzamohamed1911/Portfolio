@@ -10,11 +10,12 @@ const Sidebar = () => {
   
     const toggleSidebar = () => {
       setIsOpen(!isOpen);
-    };
+    }
+
     return (
       <div className="fixed top-1/4 right-0 z-20">
 
-        <div className=" mr-1 transition hover:-translate-x-3  duration-200 ">
+        <div className=" mr-1 transition hover:-translate-x-3 duration-400 ">
           {!isOpen && (
             <button onClick={toggleSidebar}><IoIosArrowBack className= " bg-blue-600 text-white rounded-md " size={24} /></button>
           )}
@@ -23,13 +24,11 @@ const Sidebar = () => {
         <AnimatePresence>
           {isOpen && (
            <motion.div
-           initial={{  x: '100%' }}
+           initial={{  x: '140%' }}
            animate={{ x: 0 }}
-           exit={{  x: '100%' }}
+           exit={{  x: '140%' }}
            transition={{ duration: 0.5, type: 'spring', stiffness: 200, damping: 25 }}
-           className= " relative bg-gray-200 shadow-md p-6 rounded-lg"
-           whileHover={{ translateX: 12 }} 
-         >
+           className= " relative bg-gray-200 shadow-md p-6 rounded-lg">
           
 
            <div   className=" flex flex-col gap-4 items-center">
