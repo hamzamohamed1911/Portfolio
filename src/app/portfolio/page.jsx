@@ -1,12 +1,11 @@
 "use client"
 import { motion ,useScroll ,useTransform} from "framer-motion";
-import {  useRef } from "react";
+import {  Suspense, useRef } from "react";
 import Image from 'next/image';
 import { arrowDown, cloud, moon } from "../../../public";
-import { PROJECTS } from "../_constants";
-import Link from 'next/link'
-import Button from "../_components/Button";
+
 import { useDark } from "../_store/ThemeProvider";
+import Projects from "./_components/Projects";
 
 const Portfolio = () => {
 const ref = useRef();
@@ -66,27 +65,10 @@ const x = useTransform(scrollYProgress, [0,1], ["0%", " -87%"])
 
 
           <div className="sticky top-10 flex h-screen gap-20 items-center">
-            <div className="flex">
-             {PROJECTS.map((project)=>(
-              <div className={`-mx-1  px-10 h-screen w-screen flex items-center justify-center bg-gradient-to-r ${project.color} `} key={project.id}>
-                <div className="p-20 flex flex-col  text-white">
-                  <h1 className="text-4xl pb-6 font-semibold">{project.title} </h1>
-                  <Link href={project.DomainLink} className="relative">
-                    <Image alt="project" className="object-contain rounded-md hover:brightness-90" src={project.src} height={500} width={500}/>
-                  </Link>
-                  <p className="py-6 text-xl w-96 h-56 sm:text-2xl">{project.description}</p>
-                <div className="flex gap-4 lg:w-full">
-                  <Link href={project.DomainLink}>
-                    <Button label="see Demo" backgroundColor/>
-                  </Link>
-                  <Link href={project.GithubLink}>
-                    <Button label="see Code"/>
-                  </Link>
-                </div>
-                </div>
-              </div>
-              ))}
-              </div>
+       <Suspense fallback={<p>Loading Projects</p>}>
+       <Projects/>
+      </Suspense>
+            
           </div>
 
           <div   className="bg-cover  bg-center flex items-center justify-center -mx-1 w-screen h-screen bg-gradient-to-r from-blue-950 to-slate-950 ">

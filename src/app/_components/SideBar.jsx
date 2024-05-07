@@ -27,7 +27,7 @@ const Sidebar = () => {
       initial={{ x: '140%' }}
       animate={{ x: 0 }}
       exit={{ x: '140%' }}
-      transition={{ duration: 0.6, stiffness: 500 }}
+      transition={{ duration: 0.4, stiffness: 500 }}
       className="relative bg-gray-200 shadow-md p-6 rounded-lg"
     >
       <div className="flex flex-col gap-4 items-center">
