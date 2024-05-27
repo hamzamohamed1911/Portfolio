@@ -25,7 +25,7 @@ const TransitionProvider = ({ children }) => {
       objectFit="cover"
       priority={true}
       quality={100}
-      className="fixed top-0 left-0 w-full h-full z-0"
+      className="  w-full h-full z-0"
     />}
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
