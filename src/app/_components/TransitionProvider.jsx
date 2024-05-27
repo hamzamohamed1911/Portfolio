@@ -16,7 +16,7 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className={`w-screen h-screen bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
+        className={`w-full h-full bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
       >
         {dark && <Image
       src="/night.jpg"
