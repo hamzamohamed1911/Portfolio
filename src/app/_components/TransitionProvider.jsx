@@ -16,7 +16,7 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className={`w-full h-full bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
+        className={`w-screen h-full bg-cover ${!dark && 'h-full bg-gradient-to-b from-blue-200 to-blue-400'}`}
       >
         {dark && <Image
       src="/night.jpg"
@@ -25,7 +25,7 @@ const TransitionProvider = ({ children }) => {
       objectFit="cover"
       priority={true}
       quality={100}
-      className="  w-full h-full z-0"
+      className=" w-full h-full z-0"
     />}
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
