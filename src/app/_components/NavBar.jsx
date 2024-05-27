@@ -9,6 +9,7 @@ import { useDark } from "../_store/ThemeProvider";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const { dark } = useDark(); 
+  
   const topVariants={
     closed:{rotate:0},
     opened:{rotate:45}
@@ -36,7 +37,7 @@ const NavBar = () => {
     <header className='py-4 w-full h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 '>
       
      {/*links*/}
-       <div className="hidden md:flex gap-4 text-2xl">
+       <div className="hidden md:flex gap-4 text-2xl z-10">
            {Links.map(link=>(
              <NavLink link={link} key={link.title}/>
             ))}
@@ -44,7 +45,7 @@ const NavBar = () => {
 
         {/*logo*/}
 
-        <div className="md:hidden flex lg:flex  xl:justify-center ransition-all hover:-translate-y-1 hover:scale-110 duration-300">
+        <div className="md:hidden flex lg:flex  xl:justify-center ransition-all hover:-translate-y-1 hover:scale-110 duration-300 z-10">
             <Link href="/" className="text-md bg-blue-500  rounded-md p-2 font-semibold flex items-center justify-center"  >
              
               <span className="text-white mr-2">
@@ -57,7 +58,7 @@ const NavBar = () => {
         </div>
 
         { /*social Icons */}
-        <div className="hidden md:flex gap-5 ">
+        <div className="hidden md:flex gap-5 z-10">
              {icons.map(icon=>(<Link href={icon.url} key={icon.alt}>
 
               <span className= {`${dark ? "hover:fill-blue-400 fill-blue-200" : "fill-blue-500 hover:fill-blue-700"} `}> {icon.ico}</span>
@@ -65,7 +66,7 @@ const NavBar = () => {
         </div>
 
         { /* menu button */}
-        <div className="md:hidden z-30">
+        <div className="md:hidden z-10">
           
      
          <button className="w-10 h-8 flex flex-col justify-between z-20 relative" onClick={(()=>setOpen((prev)=>!prev))}>

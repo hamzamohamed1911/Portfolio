@@ -4,23 +4,35 @@ import NavBar from "./NavBar"
 import { usePathname } from "next/navigation"
 import Sidebar from "./SideBar"
 import { useDark } from "../_store/ThemeProvider"
+import Image from "next/image"
 
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
   const { dark } = useDark();
+  
 
-  const backgroundImageStyle = dark ? { backgroundImage: `url('./night.jpg')` } : {};
 
   return (
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        style={{ ...backgroundImageStyle }}
         className={`w-screen h-screen bg-cover ${!dark && 'bg-gradient-to-b from-blue-200 to-blue-400'}`}
       >
+        {dark && <Image
+      src="/night.jpg"
+      alt="Background image"
+      layout="fill"
+      objectFit="cover"
+      priority={true}
+      quality={100}
+      className="fixed top-0 left-0 w-full h-full z-0"
+    />
+
+}
+
         <motion.div
-          className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
+          className="h-screen w-screen fixed bg-white rounded-b-[100px] "
           animate={{ height: "0vh" }}
           exit={{ height: "140vh" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -28,7 +40,7 @@ const TransitionProvider = ({ children }) => {
 
         <motion.div
           className="fixed m-auto inset-0 text-blue-500 text-8xl cursor-default z-40 w-fit h-fit"
-          style={{ pointerEvents: 'none' }}
+          style={{ pointerEvents: "none" }}
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
@@ -38,7 +50,7 @@ const TransitionProvider = ({ children }) => {
         </motion.div>
 
         <motion.div
-          className="h-screen w-screen fixed bg-white  rounded-t-[100px] buttom-0 z-20"
+          className="h-screen w-screen fixed bg-white rounded-t-[100px] buttom-0 z-20"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh ", transition: { delay: 0.5 } }}
         />
@@ -53,6 +65,6 @@ const TransitionProvider = ({ children }) => {
       </div>
     </AnimatePresence>
   );
-}
+};
 
 export default TransitionProvider;
