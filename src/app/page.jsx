@@ -37,7 +37,7 @@ const Homepage = () => {
         Hello! My Name Is Hamza muhammed , a dedicated React.js and Next.js developer with a strong foundation in computer science. Graduating from the Faculty of Computer Science has equipped me with a solid understanding of fundamental programming concepts, which I apply in my work to create innovative web applications. 
         </p>
         <div className='flex gap-4 lg:w-full'>
-          <Button handleClick={() => router.push('/portfolio')} label=" Veiw my work" />
+          <Button handleClick={() => router.push('/portfolio')} label=" View my work" />
            
           <Button handleClick={() => router.push('/contact')} backgroundColor label="Contact me" /> 
             
