@@ -19,14 +19,14 @@ const TransitionProvider = ({ children }) => {
         className={`relative w-screen h-screen ${!dark && 'h-full bg-gradient-to-b from-blue-200 to-blue-400'}`}
       >
         {dark && <Image
-      src="/night.jpg"
-      alt="Background image"
-      layout="fill"
-      objectFit="cover"
-      priority={true}
-      quality={100}
-      className=" w-full h-full z-0"
-    />}
+    src="/night.jpg"
+    alt="Background image"
+    layout="fill"
+    objectFit="cover"
+    priority={true}
+    quality={100}
+    className="z-0"
+  />}
         <motion.div
           className="h-screen w-screen fixed bg-white rounded-b-[100px] z-30"
           animate={{ height: "0vh" }}
